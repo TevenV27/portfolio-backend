@@ -21,7 +21,6 @@ app.get('/', (req, res) => {
   res.json({ message: "API Teven Portfolio" });
 });
 
-
 app.use('/api/projects', projectRoutes);
 app.use('/api/about', aboutRoutes)
 app.use('/api/education', educationRoutes);
