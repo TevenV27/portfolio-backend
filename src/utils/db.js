@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-export const connect = async () => {
+export const connect = () => {
 
   mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
