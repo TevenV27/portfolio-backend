@@ -18,7 +18,7 @@ app.use(express.json());
 connect();
 
 app.get('/', (req, res) => {
-  res.send(res.json('API Teven porfolio'));
+  res.send("API Teven Portfolio");
 })
 
 app.use('/api/projects', projectRoutes);
