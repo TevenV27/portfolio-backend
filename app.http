@@ -1,29 +1,12 @@
-### Recuperar todos los proyectos
+###
+GET http://localhost:8080/api/technology
 
-GET http://localhost:3000/api/projects
+###
+POST http://localhost:8080/api/technology
 
-### Recuperar un proyecto por su ID
-
-POST http://localhost:3000/api/projects
 Content-Type: application/json
 
 {
-  "title": "Marlen y Carlos",
-  "description": "This is a Weeding project",
-  "technologies": ["React", "Git", "Node", "Express", "MongoDB"],
-   "image": "https://raw.githubusercontent.com/TevenV27/server-images/main/projects/valorant-page.png"
+    "name": "React",
+    "logo": "https://raw.githubusercontent.com/TevenV27/server-images/main/projects/technologies/react.png"
 }
-### Actualizar proyecto por su ID
-PUT http://localhost:3000/api/projects/64e23b28fb2672b37cd95793
-Content-Type: application/json
-
-{
-  "title": "Valorant"],
-  "description": "This is a page to Movistar",
-  "technologies": ["React", "Git"],
-   "image": "patch/sesf"
-}
-
-### Eliminar proyecto por su ID
-
-DELETE http://localhost:3000/api/projects/64e2394bf106f351b3b40264
