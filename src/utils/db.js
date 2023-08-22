@@ -1,6 +1,10 @@
 import mongoose from 'mongoose';
 
+<<<<<<< HEAD
 export const async connect = () => {
+=======
+export const connect = async () => {
+>>>>>>> e60731a (Async db)
   mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,

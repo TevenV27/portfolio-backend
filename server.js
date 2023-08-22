@@ -10,7 +10,7 @@ const PORT = process.env.PORT ?? 8080;
 app.use(express.json());
 
 // Conectar a la base de datos
-connect();
+await connect();
 
 app.get('/', (req, res) => {
   res.json('Entra')
@@ -18,6 +18,9 @@ app.get('/', (req, res) => {
 
 // Rutas para proyectos
 app.use('/api/projects', projectRoutes);
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+})
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
