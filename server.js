@@ -12,10 +12,6 @@ app.use(express.json());
 // Conectar a la base de datos
 await connect();
 
-app.get('/', (req, res) => {
-  res.json('Entra')
-})
-
 // Rutas para proyectos
 app.use('/api/projects', projectRoutes);
 app.get('/', (req, res) => {
