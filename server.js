@@ -7,14 +7,33 @@ import educationRoutes from './src/routes/educationRoutes.js';
 import technologyRoutes from './src/routes/technologyRoutes.js';
 import userRoutes from './src/routes/userRoutes.js';
 import experienceRoutes from './src/routes/experienceRoutes.js';
-import authMiddleware from  './src/middlewares/authMiddleware.js';
-
+import cors from 'cors';
 
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT ?? 8080;
 
 app.use(express.json());
+app.use(cors({
+  origin: (origin, callback) => {
+    const ACCEPTED_ORIGINS = [
+      'http://localhost:3000',
+      'https://teven.vercel.app',
+      'https://dashboard-teven.vercel.app'
+    ]
+
+    if (ACCEPTED_ORIGINS.includes(origin)) {
+      return callback(null, true);
+    }
+
+    if (!origin) {
+      return callback(null, true);
+    }
+
+    return callback(new Error('Not allowed by CORS'));
+  }
+}));
+
 
 // Conectar a la base de datos
 connect();
