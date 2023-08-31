@@ -122,6 +122,7 @@ Content-Type: application/json
 }
 ###
 DELETE http://localhost:8080/api/experience/64f00c38ff7b22052bbbca7b
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWZmMzE0Y2ViN2E2MjA3MGQ4ZGViNSIsImlhdCI6MTY5MzQ1MzMzOCwiZXhwIjoxNjkzNDU2OTM4fQ.nxb1XES3mgavY2EdFoaK4za63Ii-BnEViNg8NDTvZ9w
 
 ###
 GET http://localhost:8080/api/projects

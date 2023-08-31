@@ -33,6 +33,20 @@ const projectSchema = new mongoose.Schema({
       'El campo "image" debe ser una URL válida.',
     ],
   },
+  siteUrl:{
+    type: String,
+    required: true,
+    match: [
+      /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/,
+      'El campo "siteUrl" debe ser una URL válida.',]
+  },
+  repoUrl:{
+    type: String,
+    required: true,
+    match: [
+      /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/,
+      'El campo "siteUrl" debe ser una URL válida.',]
+  }
 });
 
 const Project = mongoose.model('Project', projectSchema);
