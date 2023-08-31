@@ -5,7 +5,8 @@ import projectRoutes from './src/routes/projectRoutes.js';
 import aboutRoutes from './src/routes/aboutRoutes.js';
 import educationRoutes from './src/routes/educationRoutes.js';
 import technologyRoutes from './src/routes/technologyRoutes.js';
-
+import userRoutes from './src/routes/userRoutes.js';
+import authMiddleware from  './src/middlewares/authMiddleware.js';
 
 
 dotenv.config();
@@ -21,11 +22,12 @@ app.get('/', (req, res) => {
   res.json({ message: "API Teven Portfolio" });
 });
 
+app.use('/api/login', userRoutes)
 app.use('/api/projects', projectRoutes);
 app.use('/api/about', aboutRoutes)
 app.use('/api/education', educationRoutes);
 app.use('/api/technology', technologyRoutes)
-console.log("Welcome")
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

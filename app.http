@@ -1,12 +1,105 @@
-###
-GET http://localhost:8080/api/technology
+### Recuperar todos los proyectos
 
-###
-POST http://localhost:8080/api/technology
+GET http://localhost:8080/api/projects
 
+### Recuperar un proyecto por su ID
+
+POST http://localhost:8080/api/projects
 Content-Type: application/json
 
 {
-    "name": "React",
-    "logo": "https://raw.githubusercontent.com/TevenV27/server-images/main/projects/technologies/react.png"
+  "title": "Marlen y Carlos",
+  "description": "This is a Weeding project",
+  "technologies": ["React", "Git", "Node", "Express", "MongoDB"],
+   "image": "https://raw.githubusercontent.com/TevenV27/server-images/main/projects/valorant-page.png"
 }
+### Actualizar proyecto por su ID
+PUT http://localhost:8080/api/projects/64e23b28fb2672b37cd95793
+Content-Type: application/json
+
+{
+  "title": "Valorant wiki",
+  "description": "To practice my skills, I have decided to create an informative page about Valorant, one of my favorite games. I am using the endpoints provided by the Riot public API. Initially, my main goal was to practice, but now I continue development with the goal of expanding it and turning it into a product that can help players. The page is still a work in progress, but I'm excited about its potential to help the gaming community.",
+  "technologies": ["React", "Vite","CSS","Animate","Vercel"],
+   "image": "https://raw.githubusercontent.com/TevenV27/server-images/main/projects/valorant-page.png"
+}
+
+### Eliminar proyecto por su ID
+
+DELETE http://localhost:8080/api/projects/64e52455e44bd63719080ad1
+
+### Recuperar el about
+
+GET http://localhost:8080/api/about
+
+### añadir el about y la frase
+
+POST http://localhost:8080/api/about
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWZmMzE0Y2ViN2E2MjA3MGQ4ZGViNSIsImlhdCI6MTY5MzQ0NzQ5NywiZXhwIjoxNjkzNDUxMDk3fQ.lCKqYGbztQffydzfiqzzM924CD5WPzRak2t2sdOJ7e0
+
+{
+  
+  "description": "Hello everyone, my name is Steven Victoria, I live in Colombia and as a software developer and final year student of systems engineering, I am constantly pursuing new challenges that allow me to skilfully apply my skills and knowledge. My involvement in teamwork is distinguished by my proactivity and ability to collaborate, backed by a strong work ethic and sharp analytical skills that I use to efficiently and accurately address problems.\nI define myself as a perpetual learner, always in search of continuous improvement of my competencies and staying abreast of the latest trends in the field of computer science. My primary goal is to join an innovative team where I can make a significant contribution in the role of a Full-stack Developer or Front-end specialist.",
+  "pharase": "A goal without a plan is just a wish"
+}
+
+### actualizar el about y la frase
+PUT http://localhost:8080/api/about/64e51b39ead028ee9a9f90de
+Content-Type: application/json
+
+{ 
+  "description": "Esto me gusta mucho",
+  "pharase": "Es importanteee"
+}
+###
+DELETE http://localhost:8080/api/about/64effd2746fb6377e0f6677f
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWZmMzE0Y2ViN2E2MjA3MGQ4ZGViNSIsImlhdCI6MTY5MzQ0NzQ5NywiZXhwIjoxNjkzNDUxMDk3fQ.lCKqYGbztQffydzfiqzzM924CD5WPzRak2t2sdOJ7e0
+
+
+
+### Recuperar el education
+
+GET http://localhost:8080/api/education
+
+### añadir el about y la frase
+
+POST http://localhost:8080/api/education
+Content-Type: application/json
+
+{
+  
+  "institute": "Technical Bachelor of Business Administration - Tulua Valle del Cauca",
+  "description": "I completed high school simultaneously with my technical studies in business administration.",
+  "yearInitiated": 2016,
+  "yearGraduated": 2017
+}
+
+### actualizar el about y la frase
+PUT http://localhost:8080/api/education/64e51c9979d92f671652ddc5
+Content-Type: application/json
+
+{ 
+  "institute": "English at Pacific College SAS - Colombia",
+  "description": "I did my English learning in an excellent school, focusing on speaking and listening, obtaining a B1 level of English.",
+  "yearInitiated": 2018,
+  "yearGraduated": 2019
+}
+
+### Eliminar education por su ID
+
+DELETE http://localhost:8080/api/education/64e52195e44bd63719080ac4
+
+###
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+    "username": "teven",
+    "password": "@1000145230KSVO"
+}
+
+### Recuperar todos los proyectos
+
+GET http://localhost:8080/api/projects
+# x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWZmMzE0Y2ViN2E2MjA3MGQ4ZGViNSIsImlhdCI6MTY5MzQ0NzQ5NywiZXhwIjoxNjkzNDUxMDk3fQ.lCKqYGbztQffydzfiqzzM924CD5WPzRak2t2sdOJ7e0
