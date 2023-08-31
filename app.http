@@ -100,9 +100,10 @@ GET http://localhost:8080/api/experience
 
 POST http://localhost:8080/api/experience
 Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWZmMzE0Y2ViN2E2MjA3MGQ4ZGViNSIsImlhdCI6MTY5MzQ1MzMzOCwiZXhwIjoxNjkzNDU2OTM4fQ.nxb1XES3mgavY2EdFoaK4za63Ii-BnEViNg8NDTvZ9w
 
 {
-  "title": "Graphic designer at Global Publicity",
+  "title": "Graphic designer at Global Publicity SSSSSSSSS",
   "description": "Generate designs for a wide array of advertising products",
   "duration": "4 months",
   "technologies": ["Photoshop","Illustrator","CorelDraw","Figma"]
@@ -110,5 +111,29 @@ Content-Type: application/json
 
 
 ###
+PUT http://localhost:8080/api/experience/64f00813419a873e41b474d8
+Content-Type: application/json
+
+{
+  "title": "designer at Global Publicit",
+  "description": "Generate designs for a wide array of advertising products",
+  "duration": "4 months",
+  "technologies": ["Photoshop","Illustrator","CorelDraw","Figma"]
+}
+###
+DELETE http://localhost:8080/api/experience/64f00c38ff7b22052bbbca7b
+
+###
 GET http://localhost:8080/api/projects
 # x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWZmMzE0Y2ViN2E2MjA3MGQ4ZGViNSIsImlhdCI6MTY5MzQ0NzQ5NywiZXhwIjoxNjkzNDUxMDk3fQ.lCKqYGbztQffydzfiqzzM924CD5WPzRak2t2sdOJ7e0
+
+
+###
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "username": "teven",
+  "password": "@1000145230KSVO"
+
+}
