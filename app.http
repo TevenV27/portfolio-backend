@@ -91,15 +91,24 @@ Content-Type: application/json
 DELETE http://localhost:8080/api/education/64e52195e44bd63719080ac4
 
 ###
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-    "username": "teven",
-    "password": "@1000145230KSVO"
-}
 
 ### Recuperar todos los proyectos
 
+GET http://localhost:8080/api/experience
+
+###
+
+POST http://localhost:8080/api/experience
+Content-Type: application/json
+
+{
+  "title": "Graphic designer at Global Publicity",
+  "description": "Generate designs for a wide array of advertising products",
+  "duration": "4 months",
+  "technologies": ["Photoshop","Illustrator","CorelDraw","Figma"]
+}
+
+
+###
 GET http://localhost:8080/api/projects
 # x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWZmMzE0Y2ViN2E2MjA3MGQ4ZGViNSIsImlhdCI6MTY5MzQ0NzQ5NywiZXhwIjoxNjkzNDUxMDk3fQ.lCKqYGbztQffydzfiqzzM924CD5WPzRak2t2sdOJ7e0
